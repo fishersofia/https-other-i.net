@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+
+  font-family: sans-serif;
+}
+
+.threedCap {
+  width: 100%; /* Занимает всю доступную ширину flex-элемента */
+  height: 100%; /* Занимает всю доступную высоту flex-элемента */
+  cursor: grab;
+  z-index: 1;
+  position: relative; /* На всякий случай, если внутри будут абсолютные элементы */
+}
+
+.threedCap:active {
+  cursor: grabbing;
+}
