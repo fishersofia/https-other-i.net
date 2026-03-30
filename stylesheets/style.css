@@ -59,8 +59,7 @@ section + section::before {
   z-index: 50;
   pointer-events: none;
   background-image:
-    url("../images/divider-top-a.png"),
-    url("../images/divider-top-b.png"),
+    url("../images/divider-top-a.png"), url("../images/divider-top-b.png"),
     url("../images/rainbow-bar-a.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
@@ -487,7 +486,7 @@ section.block-7::before {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transform: translateY(-0.35vw);
+  transform: translateY(-0.12vw);
 }
 
 .block-3__square-btn span {
@@ -771,18 +770,18 @@ section.block-7::before {
 /* размеры и позиции */
 .win--photo {
   width: 26vw;
-  top: 9.4vw;
+  top: 6.6vw;
   left: calc(50% + var(--windows-shift-x));
   transform: translateX(-50%);
-  margin-left: -28vw;
+  margin-left: -32.6vw;
 }
 
 .win--warning {
   width: 26vw;
-  top: 9.8vw;
+  top: 14.3vw;
   left: calc(50% + var(--windows-shift-x));
   transform: translateX(-50%);
-  margin-left: -1.8vw;
+  margin-left: -1.4vw;
   background: #c0c0c0;
   border-color: #ffffff #ffffff #2f2f2f #2f2f2f;
   box-shadow:
@@ -801,22 +800,23 @@ section.block-7::before {
 
 .win--error {
   width: 18vw;
-  top: 9.9vw;
+  top: 6.4vw;
   left: calc(50% + var(--windows-shift-x));
   transform: translateX(-50%);
-  margin-left: 24vw;
+  margin-left: 26.2vw;
 }
 
-  .win--question {
-    top: 26vw;
-  }
+.win--question {
+  top: 31.8vw;
+  margin-left: 0.9vw;
+}
 
 .win--tip {
   width: 26vw;
-  top: 35.2vw;
+  top: 29.9vw;
   left: calc(50% + var(--windows-shift-x));
   transform: translateX(-50%);
-  margin-left: -0.5vw;
+  margin-left: -2.8vw;
 }
 
 .win--danger {
@@ -824,7 +824,7 @@ section.block-7::before {
   top: 35.2vw;
   left: calc(50% + var(--windows-shift-x));
   transform: translateX(-50%);
-  margin-left: 24vw;
+  margin-left: 27vw;
 }
 
 .win.is-hidden {
@@ -1444,7 +1444,8 @@ section.block-7::before {
   --block-7-frame-pad-x: 1.1vw;
   --block-7-side-decor-width: var(--side-decor-width);
   --block-7-visible-edge-offset: calc(
-    var(--block-7-side-decor-width) - 1.3vw - var(--block-7-frame-pad-x) + 0.15vw
+    var(--block-7-side-decor-width) - 1.3vw - var(--block-7-frame-pad-x) +
+      0.15vw
   );
   --block-7-content-gutter: var(--block-7-visible-edge-offset);
   --block-7-content-left: var(--block-7-content-gutter);
@@ -1490,7 +1491,8 @@ section.block-7::before {
   font-weight: 400;
   text-transform: uppercase;
   user-select: none;
-  animation: block7LetterGlitch var(--letter-glitch-duration) steps(4, end) infinite;
+  animation: block7LetterGlitch var(--letter-glitch-duration) steps(4, end)
+    infinite;
   animation-delay: var(--letter-glitch-delay);
   will-change: transform, opacity, filter;
 }
@@ -1843,7 +1845,6 @@ section.block-7::before {
   box-shadow: 0 0 0.5vw #fff;
 }
 
-/* ===== анимации ===== */
 @keyframes tickerMove {
   from {
     transform: translateX(0);
@@ -1967,55 +1968,82 @@ section.block-7::before {
     filter: none;
   }
   12% {
-    transform: translate(calc(var(--letter-drift-x) * 1.15), calc(var(--letter-drift-y) * -0.7))
+    transform: translate(
+        calc(var(--letter-drift-x) * 1.15),
+        calc(var(--letter-drift-y) * -0.7)
+      )
       rotate(calc(var(--letter-rotate) + 3.2deg));
     opacity: 1;
     filter: drop-shadow(0.12vw 0 0 rgba(0, 102, 255, 0.9));
   }
   18% {
-    transform: translate(calc(var(--letter-drift-x) * -0.9), calc(var(--letter-drift-y) * 0.95))
+    transform: translate(
+        calc(var(--letter-drift-x) * -0.9),
+        calc(var(--letter-drift-y) * 0.95)
+      )
       rotate(calc(var(--letter-rotate) - 2.8deg));
     opacity: 0.74;
     filter: drop-shadow(-0.12vw 0 0 rgba(255, 255, 255, 0.95));
   }
   24% {
-    transform: translate(calc(var(--letter-drift-x) * 0.4), calc(var(--letter-drift-y) * -0.35))
+    transform: translate(
+        calc(var(--letter-drift-x) * 0.4),
+        calc(var(--letter-drift-y) * -0.35)
+      )
       rotate(calc(var(--letter-rotate) + 1.2deg));
     opacity: 1;
     filter: none;
   }
   41% {
-    transform: translate(calc(var(--letter-drift-x) * -1.2), calc(var(--letter-drift-y) * -0.65))
+    transform: translate(
+        calc(var(--letter-drift-x) * -1.2),
+        calc(var(--letter-drift-y) * -0.65)
+      )
       rotate(calc(var(--letter-rotate) - 3.4deg));
     opacity: 0.86;
     filter: drop-shadow(0.1vw 0.05vw 0 rgba(0, 102, 255, 0.85));
   }
   44% {
-    transform: translate(calc(var(--letter-drift-x) * 1.25), calc(var(--letter-drift-y) * 0.55))
+    transform: translate(
+        calc(var(--letter-drift-x) * 1.25),
+        calc(var(--letter-drift-y) * 0.55)
+      )
       rotate(calc(var(--letter-rotate) + 4.2deg));
     opacity: 1;
     filter: drop-shadow(-0.12vw -0.04vw 0 rgba(255, 255, 255, 1));
   }
   46% {
-    transform: translate(calc(var(--letter-drift-x) * -0.28), calc(var(--letter-drift-y) * 0.16))
+    transform: translate(
+        calc(var(--letter-drift-x) * -0.28),
+        calc(var(--letter-drift-y) * 0.16)
+      )
       rotate(calc(var(--letter-rotate) - 1deg));
     opacity: 0.96;
     filter: none;
   }
   63% {
-    transform: translate(calc(var(--letter-drift-x) * 0.9), calc(var(--letter-drift-y) * 1.25))
+    transform: translate(
+        calc(var(--letter-drift-x) * 0.9),
+        calc(var(--letter-drift-y) * 1.25)
+      )
       rotate(calc(var(--letter-rotate) + 2.1deg));
     opacity: 1;
     filter: drop-shadow(0.09vw 0 0 rgba(0, 102, 255, 0.82));
   }
   68% {
-    transform: translate(calc(var(--letter-drift-x) * -0.55), calc(var(--letter-drift-y) * -1.15))
+    transform: translate(
+        calc(var(--letter-drift-x) * -0.55),
+        calc(var(--letter-drift-y) * -1.15)
+      )
       rotate(calc(var(--letter-rotate) - 2.6deg));
     opacity: 0.76;
     filter: drop-shadow(-0.09vw 0 0 rgba(255, 255, 255, 0.96));
   }
   74% {
-    transform: translate(calc(var(--letter-drift-x) * 0.2), calc(var(--letter-drift-y) * 0.28))
+    transform: translate(
+        calc(var(--letter-drift-x) * 0.2),
+        calc(var(--letter-drift-y) * 0.28)
+      )
       rotate(calc(var(--letter-rotate) + 0.8deg));
     opacity: 0.98;
     filter: none;
