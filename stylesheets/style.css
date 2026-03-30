@@ -487,7 +487,7 @@ section.block-7::before {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transform: translateY(-0.35vw);
+  transform: translateY(-0.6vw);
 }
 
 .block-3__square-btn span {
